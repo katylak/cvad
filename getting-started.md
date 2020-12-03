@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-10-01"
+lastupdated: "2020-12-03"
 
 keywords:
 
@@ -44,7 +44,7 @@ After you review this information, you are ready to get started. To begin, you n
 2. Add {{site.data.keyword.cloud_notm}} classic infrastructure API key
 3. Verify Citrix and operating system entitlements
 4. Set up network connectivity for logging on to {{site.data.keyword.cloud_notm}}
-5. Enable VLAN spanning on your account
+5. Enable VLAN spanning or VRF on your account
 6. Set up user permissions in IAM
 
 ## Step 1. Sign up for an {{site.data.keyword.cloud_notm}} account
@@ -67,12 +67,15 @@ Verify that you have the Citrix Virtual Apps and Desktops service license availa
 
 All of the resources that are provisioned through this solution are in a private network space with security groups attached wherever needed. The IP addresses are internal to IBM, so you need to use a separate VPN account for logging on to hypervisors and creating the virtual machine images. For more information about enabling VPN access and setting the password, see [Getting started with {{site.data.keyword.cloud_notm}} Virtual Private Networking](/docs/iaas-vpn?topic=iaas-vpn-getting-started). After you enable your VPN access and set the password, download the [VPN client](/docs/iaas-vpn?topic=iaas-vpn-standalone-vpn-clients). You then have access to the private network where your resources are provisioned.
 
-## Step 5. Enable VLAN spanning on your {{site.data.keyword.cloud_notm}} account
+## Step 5. Enable VLAN spanning or VRF on your {{site.data.keyword.cloud_notm}} account
 {: #enable-vlan-spanning}
 
+To enable VLAN spanning, complete the following steps:
 1. Log in to the {{site.data.keyword.cloud_notm}} console by using your unique credentials. 
 2. Select **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Classic Infrastructure > Network > IP Management > VLANs**. 
 3. Click **VLAN Spanning** and select _Enable_. 
+
+To enable VRF, see [Enabling VRF](/docs/account?topic=account-vrf-service-endpoint#vrf). 
 
 ## Step 6. Set up user permissions in IAM
 {: #set-up-user-permissions}
