@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-10-16"
+lastupdated: "2020-12-07"
 
 keywords:
 
@@ -77,8 +77,9 @@ Your bare metal server hardware and configuration recommendations are based on y
 
 | Field     | Details     |
 | --------- | ----------- |
-| Hosted-Shared Apps and Desktops | The hosted-shared apps and desktops model allows you to deliver an application or desktop interface to many users. This option supports applications or desktop interfaces that run on a desktop OS or server OS. |
-| Virtual Desktop Infrastructure | The virtual desktop infrastructure model allows you to deliver a desktop OS to users in a one-to-one mapping. Options exist for pooled (random assignment) and personal (static assignment) desktops. For more information, see [Delivery methods](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops-service/delivery-methods.html){: external}. |
+| Hosted-Shared Apps and Desktops | Deliver an application or desktop experience from multi-session OS machines to multiple, simultaneously connected users. |
+| Server Virtual Desktop Infrastructure | Deliver a desktop experience from a server OS for a single user. |
+| Desktop Virtual Desktop Infrastructure | Deliver a pooled or dedicated desktop experience from single-session OS machines. |
 {: caption="Table 2. Workload requirements options" caption-side="top"}
 
 When you select your workload requirements, you need to select how many of each type of user who needs to be supported. For more information about the user types, see the following table.
