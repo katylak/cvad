@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-07-17"
+lastupdated: "2020-12-09"
 
 keywords: 
 
@@ -26,7 +26,7 @@ subcollection: cvad
 ## IBM Cloud monitoring services
 {: #ibm-cloud-monitoring}
 
-You can configure service and slow pings with {{site.data.keyword.cloud}} monitoring services to make sure that your devices are online and responsive. You can also configure user notifications. For more information, see [{{site.data.keyword.cloud_notm}} monitoring services](/docs/cloud-infrastructure?topic=cloud-infrastructure-monitoring). You can also enable advanced monitoring with {{site.data.keyword.mon_full_notm}}. For more information, see the [{{site.data.keyword.mon_full_notm}} getting started tutorial](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started).
+You can configure monitoring with {{site.data.keyword.mon_full}} to keep you aware of any issues with your devices. For more information, see [{{site.data.keyword.cloud_notm}} monitoring services](/docs/cloud-infrastructure?topic=cloud-infrastructure-monitoring).
 
 ## Virtual Apps and Desktops monitoring
 {: #virtual-apps-desktops-monitoring}
