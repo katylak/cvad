@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-10-01"
+lastupdated: "2020-12-10"
 
 keywords: 
 
@@ -28,7 +28,7 @@ After you provision your {{site.data.keyword.cvad_full}} (CVAD) with the Citrix 
 1. Verify status of provisioned servers and view network and storage details
 2. (Optional) Provision virtual server instance for management
 3. Access the Citrix Hypervisor
-4. (Recommended) Create resource pools
+4. Create resource pools
 5. Access the Active Directory, Cloud Connectors, DHCP, and proxy server
 6. Create master image of virtual machine
 
@@ -72,12 +72,12 @@ You must provision the virtual server instance with the same [network details](/
 
 Download the XenCenter software from [Citrix downloads](https://www.citrix.com/downloads/citrix-hypervisor/){: external} on the machine that you use to connect to your bare metal servers.
 
-## Step 4. (Recommended) Create resource pools
+## Step 4. Create resource pools
 {: #create-resource-pools}
 
 You can run your hypervisors in pools. If you have both server VDA workloads and desktop VDA workloads, create a separate pool for each workload so that they are hosted in different pools. For more information, see [Hosts and resource pools](https://docs.citrix.com/en-us/citrix-hypervisor/hosts-pools.html){: external}.
 
-By default, all of the bare metal servers will have the storage attached and mounted. If you would like to add the bare metal servers in a pool, you might need to unmount the storage on all of the servers but one, either through XenCenter or through Xen CLI. For more details, see [Requirements for creating resource pools](https://docs.citrix.com/en-us/citrix-hypervisor/hosts-pools.html#requirements-for-creating-resource-pools){: external}.
+If you ordered only one bare metal server, the storage is attached and mounted on the server. If you ordered multiple bare metal servers, the storage is attached on only one server, which is tagged as `master`. You can query your master node by filtering your device list with the tags `master` and `<your resource location name>`. This is the master node in your resource pool. Create a resource pool with this node as master, and then add all other bare metal servers to this pool. The storage is then mounted on the remaining nodes. For more details, see [Requirements for creating resource pools](https://docs.citrix.com/en-us/citrix-hypervisor/hosts-pools.html#requirements-for-creating-resource-pools){: external}.
 
 
 ## Step 5. Access the Active Directory, Cloud Connectors, DHCP, and proxy server
