@@ -26,4 +26,4 @@ subcollection: cvad
 
 If you are experiencing intermittent, long session login times, connection timeouts, or network instability, you can set a Citrix policy that disables the Citrix Enlightened Data Transport Protocol (EDT). For instructions, see [How to Configure HDX Enlightened Data Transport Protocol](https://support.citrix.com/article/CTX220732){: external}.
 
-For a technical overview of EDT, see [Adapative transport](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/technical-overview/hdx/adaptive-transport.html){: external} in the Citrix product documentation. 
+For a technical overview of EDT, see [Adaptive transport](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/technical-overview/hdx/adaptive-transport.html){: external} in the Citrix product documentation. 
