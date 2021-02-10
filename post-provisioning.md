@@ -88,14 +88,6 @@ The Active Directory and Cloud Connectors can be accessed through a Remote Deskt
 ## Step 6. Create master image of virtual machine
 {: #create-virtual-machine}
 
-The master image for virtual machines can be created through XenCenter. Add the proxy server settings on your master image. The settings can be copied from the Cloud Connector server. 
-
-Individual virtual machine performance varies depending on workload.  However, in order to take advantage of optimizations that might result in improved performance, you can use the [Citrix Optimizer](https://support.citrix.com/article/CTX224676){: external} as well as this [tool for Windows 10](https://techcommunity.microsoft.com/t5/windows-virtual-desktop/windows-virtual-desktop-optimization-tool-now-available/m-p/1558614){: external}.
-{: tip} 
-
-## Next steps
-{: #next-steps-post-provisioning}
-
 The master image for virtual machines can be created through XenCenter. 
 
 Join the virtual machine master image to the Active Directory server domain.
@@ -114,5 +106,9 @@ To give access to all other non-administrator users, do one of the following met
 
 Individual virtual machine performance varies depending on workload.  However, to take advantage of optimizations that might result in improved performance, you can use the [Citrix Optimizer](https://support.citrix.com/article/CTX224676){: external} and this [tool for Windows 10](https://techcommunity.microsoft.com/t5/windows-virtual-desktop/windows-virtual-desktop-optimization-tool-now-available/m-p/1558614){: external}.
 {: tip} 
+
+## Next steps
+{: #next-steps-post-provisioning}
+
 
 You can then perform your management tasks in the [Citrix Cloud Portal](http://citrix.cloud.com){: external}.
