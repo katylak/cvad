@@ -96,6 +96,23 @@ Individual virtual machine performance varies depending on workload.  However, i
 ## Next steps
 {: #next-steps-post-provisioning}
 
-After you've completed these post-provisioning steps, you are now ready to install your Virtual Delivery Agent (VDA) on your virtual machine. For more information on installing the VDA, machine creation scripts, and delivery groups for desktops, see the [Citrix documentation](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops-service/install-configure.html#install-vdas-register-resources){: external}.
+The master image for virtual machines can be created through XenCenter. 
+
+Join the virtual machine master image to the Active Directory server domain.
+
+Add the proxy server settings on your master image. The settings can be copied from the Cloud Connector server to the Master VM Image. Log in to your cloud connector server and copy the settings to your master image. You can follow the instructions in setting up your proxy settings [here](https://docs.microsoft.com/en-us/troubleshoot/browsers/use-proxy-servers-with-ie). 
+
+After you copy the proxy settings to the Master VM Image, use this command:
+
+
+   ```netsh winhttp import proxy source=ie```
+
+
+To give access to all other non-administrator users, do one of the following methods:
+* Use Microsoft Group Policy settings
+* Update the windows registry on the master image and set **Proxysettingsperuser** to ***0***.
+
+Individual virtual machine performance varies depending on workload.  However, to take advantage of optimizations that might result in improved performance, you can use the [Citrix Optimizer](https://support.citrix.com/article/CTX224676){: external} and this [tool for Windows 10](https://techcommunity.microsoft.com/t5/windows-virtual-desktop/windows-virtual-desktop-optimization-tool-now-available/m-p/1558614){: external}.
+{: tip} 
 
 You can then perform your management tasks in the [Citrix Cloud Portal](http://citrix.cloud.com){: external}.
