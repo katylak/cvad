@@ -23,9 +23,6 @@ subcollection: cvad
 # Getting started with Citrix Virtual Apps and Desktops for IBM Cloud
 {: #getting-started-tutorial}
 
-{{site.data.keyword.cvad_full}} is only available to accounts with special approval to preview this beta service. Contact your IBM Sales representative if you are interested in getting access.
-{: beta}
-
 Use {{site.data.keyword.cvad_full_notm}} to create a dedicated {{site.data.keyword.cvad_short}} service environment at any of our global data centers.
 {:shortdesc}
 

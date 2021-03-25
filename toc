@@ -7,7 +7,7 @@ Citrix Virtual Apps and Desktops for IBM Cloud
     {: .navgroup id="learn"}
     getting-started.md
     about.md
-    product-compatibility-guide-beta.md
+    product-compatibility-guide.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}

@@ -30,7 +30,5 @@ subcollection: cvad
 
 | CPU series | Server configuration | Cores and Threads | IBM-supported hypervisors |
 | --- | --- | --- | --- |
-| Intel® Xeon® Silver 4110 Processor | Dual processor | 16c, 32t | Citrix XenServer 7.1 CU2 |
-| Intel® Xeon® Gold 5120 Processor | Dual processor | 28c, 56t | Citrix XenServer 7.1 CU2 |
 | Intel® Xeon® Gold 6140 Processor | Dual processor | 36c, 72t | Citrix XenServer 7.1 CU2|
 {: caption="Table 1. Supported Intel processors" caption-side="top"}
