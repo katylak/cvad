@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-08-28"
+lastupdated: "2021-04-06"
 
 subcollection: cvad
 
@@ -17,7 +17,7 @@ subcollection: cvad
 # Getting help and support
 {: #gettinghelp}
 
-If you have problems or questions when using {{site.data.keyword.cvad_short}}, you can contact Citrix support. See [Contact support](https://www.citrix.com/support/open-a-support-case/){: external}. For more information about Citrix support, see this Citrix article on [How to Contact Support - Software Customers](https://support.citrix.com/article/CTX200021){: external}.
+If you have problems or questions when using {{site.data.keyword.cvad_short}}, you can contact Citrix support. See [Contact support](https://www.citrix.com/support/open-a-support-case/){: external}.
 
 If you have problems or questions when using the underlying {{site.data.keyword.cloud_notm}} infrastructure, you can get help by searching for information or by asking questions through one of the forums. You can also create a case in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/unifiedsupport/supportcenter){: external}.
 {:shortdesc}
