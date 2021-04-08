@@ -35,7 +35,7 @@ When you provision {{site.data.keyword.cvad_full_notm}}, you receive the followi
 * File Storage with the capacity that you choose during the ordering process.
 * Primary and portable subnets on a VLAN. 
 
-All of the servers and virtual desktops are provisioned in IBM's private network and are fully secured.
+All of the servers and virtual desktops are provisioned in IBM's private network.
 {: note}
 
 ## Before you begin
