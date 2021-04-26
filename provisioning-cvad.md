@@ -66,9 +66,18 @@ After you provide your Citrix credentials, make sure to select **Validate** to v
 | Citrix API client secret | Enter your Citrix API client secret key. |
 | Resource location | This Citrix resource location must be in the same geographic location as your selected {{site.data.keyword.cloud_notm}} data center. You can either create a resource location or use an existing one. The **Use existing** resource location option is only available after your account is validated. If you create a resource location, you must follow [Citrix naming restrictions](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/resource-locations.html#naming-restrictions){: external}. Be aware that there are [resource location limits](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops-service/limits.html#resource-location-limits){: external}. |
 | Hostname for Cloud Connector | These fields are optional for naming the Cloud Connector virtual machines. You can edit the names or keep the pre-populated defaults. If you edit the names, you must follow [Microsoft naming conventions](https://support.microsoft.com/en-us/help/909264/naming-conventions-in-active-directory-for-computers-domains-sites-and){: external}. |
+
+Select **Validate** to validate your credentials.  You must have valid credentials to create an order.
+
+### Active Directory
+{: #active-directory}
+
+| Field     | Details     |
+| --------- | ----------- |
+|Active Directory Topology |How your Active Directory is installed. You have three options: <br>**IBM Cloud**<br>The Active Directory server is installed and configured on {{site.data.keyword.cloud_notm}}. <br>**Hybrid** <br>You use your existing on-premises Active Directory and you deploy a Domain Controller on {{site.data.keyword.cloud_notm}}.<br>**On-Premises** <br>You use your existing Active Directory and Domain Controller installed on-premises for this {{site.data.keyword.cvad_full_notm}} application. |
 | Cloud Connector and Active Directory domain name | The domain name is applied to both the Cloud Connectors and the Active Directory. You must follow [Microsoft naming conventions](https://support.microsoft.com/en-us/help/909264/naming-conventions-in-active-directory-for-computers-domains-sites-and){: external}. |
 | Active Directory safe mode password | The password must meet the following password complexity requirements: <br> Cannot contain the user's account name or parts of the user's full name that exceed two consecutive characters <br> Must be at least 7 characters in length <br> Must contain characters from three of the following four categories: <br>- English uppercase characters (A through Z) <br>- English lowercase characters (a through z) <br>- Base 10 digits (0 - 9) <br>- Non-alphabetic characters (for example, !, $, #, %) |
-{: caption="Table 1. Citrix connectivity details" caption-side="top"}
+{: caption="Table 2. Active Directory details" caption-side="top"}
 
 ### Workload requirements
 {: #workload-requirements}
@@ -80,7 +89,7 @@ Your bare metal server hardware and configuration recommendations are based on y
 | Hosted-Shared Apps and Desktops | Deliver an application or desktop experience from multi-session OS machines to multiple, simultaneously connected users. |
 | Server Virtual Desktop Infrastructure | Deliver a desktop experience from a server OS for a single user. |
 | Desktop Virtual Desktop Infrastructure | Deliver a pooled or dedicated desktop experience from single-session OS machines. |
-{: caption="Table 2. Workload requirements options" caption-side="top"}
+{: caption="Table 3. Workload requirements options" caption-side="top"}
 
 When you select your workload requirements, you need to select how many of each type of user who needs to be supported. For more information about the user types, see the following table.
 
@@ -89,7 +98,7 @@ When you select your workload requirements, you need to select how many of each 
 | Task Worker | Uses a light workload and runs fewer applications that are not resource-intensive. Starts and stops applications less frequently. |
 | Knowledge Worker | Uses multiple applications in well-balanced intensive workloads. |
 | Power User | Uses resource-intensive applications, such as graphics or software development applications. |
-{: caption="Table 3. Workload user types" caption-side="top"}
+{: caption="Table 4. Workload user types" caption-side="top"}
 
 ### Bare metal server configuration
 {: #server-configuration}
@@ -103,7 +112,7 @@ All of your bare metal servers are configured identically based on your selectio
 | Location  | The data center location must match the geography of your Citrix resource location. |
 | Image | An image is the deployed operating system for your servers. |
 | Profile | Consider selecting from the recommended server profiles, which are based on provided workload sizings by using Citrix best practices. You can select the **All servers** tab to choose from more supported server profiles. |
-{: caption="Table 4. Server configuration details" caption-side="top"}
+{: caption="Table 5. Server configuration details" caption-side="top"}
 
 ### File storage
 {: #file-storage}
@@ -113,7 +122,7 @@ All of your bare metal servers are configured identically based on your selectio
 | Size      | You can enter a file storage size 20 - 12,000 GB. |
 | Snapshot space | Select how much snapshot space you want for your file storage volume. For more information about snapshots, see [Snapshots](/docs/FileStorage?topic=FileStorage-snapshots). |
 | IOPS tier | By default, the IOPS tier is 4 IOPS/GB, which is designed for higher-intensity workloads. These workloads are typically characterized by having a high percentage of data active at any time. |
-{: caption="Table 5. File storage details" caption-side="top"}
+{: caption="Table 6. File storage details" caption-side="top"}
 
 ## Next steps
 {: #next-steps-provisioning-cvad}
