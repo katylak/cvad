@@ -129,7 +129,7 @@ The On-Premises option does not have a domain controller (DC) on {{site.data.key
 
 Other Active Directory Best practices include:
 * Establish as a site every geographic area that requires fast access to the latest directory information. Establishing areas that require immediate access to up-to-date Active Directory information as separate sites provide the resources that are required to meet your needs.
-* Place at least one domain controller in every site, and make at least one domain controller in each site a global catalog. Sites that do not have their own domain controllers and at least one global catalog depend on other sites for directory information and are less efficient. For more information, see [Active Directory Best Practices](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc778219(v=ws.10)?redirectedfrom=MSDN).
+* Place at least one domain controller in every site, and make at least one domain controller in each site a global catalog. Sites that do not have their own domain controllers and at least one global catalog depend on other sites for directory information and are less efficient. For more information, see [Active Directory Best Practices](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc778219(v=ws.10)?redirectedfrom=MSDN)
 
 **Network Connectivity** 
 
