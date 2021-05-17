@@ -204,12 +204,12 @@ The master image for virtual machines can be created through XenCenter.
 
 Join the virtual machine master image to the Active Directory server domain.
 
-Add the proxy server settings on your master image. The settings can be copied from the Cloud Connector server to the Master VM Image. Log in to your cloud connector server and copy the settings to your master image. You can follow the instructions in setting up your proxy settings [here](https://docs.microsoft.com/en-us/troubleshoot/browsers/use-proxy-servers-with-ie). 
+Add the proxy server settings on your master image. The settings can be copied from the Cloud Connector server to the master VM image. Log in to your Cloud Connector server and copy the settings to your master image. You can follow the instructions in setting up your proxy settings [here](https://docs.microsoft.com/en-us/troubleshoot/browsers/use-proxy-servers-with-ie){: external}. 
 
 After you copy the proxy settings to the Master VM Image, use this command:
 
 
-   ```netsh winhttp import proxy source=ie```
+   `netsh winhttp import proxy source=ie`
 
 
 To give access to all other non-administrator users, do one of the following methods:
