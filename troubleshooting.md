@@ -51,7 +51,7 @@ If the BITS service does not pick up the correct proxy settings, it can't connec
 
 3. Wait for about 10 - 15 minutes (or restart the BITS service) and retest the connectivity test.
 
-   **Restart-service -Name BITS**
+   **net stop BITS && net start BITS**
 
 ### Solution 2 - Virtual Machine master image does not have correct proxy settings
 {: #connector-failure-image}
