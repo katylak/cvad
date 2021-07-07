@@ -83,8 +83,8 @@ To provision {{site.data.keyword.cvad_full_notm}}, classic infrastructure users 
 | -------- | ---------- |
 | Account | <br>- Add/Upgrade Storage (StorageLayer) <br>- Add Server <br>- Cancel Server <br>- Add/Upgrade Services <br>- Cancel Services <br>- Add/Upgrade Cloud Instances <br>- View Event Log |
 | Devices | Select all |
-| Network | Add Compute with Public Network Port |
-| Services | Storage Manage |
+| Network | - Add IP addresses <br>- Add Compute with Public Network Port|
+| Services |- View licenses <br>- Storage Manage |
 {: caption="Table 1. Required user permissions to provision" caption-side="top"}
 
 To access and update the classic infrastructure permissions, complete the following steps:
