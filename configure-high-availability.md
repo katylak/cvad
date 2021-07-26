@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-07-21"
+  years: 2020, 2021
+lastupdated: "2021-05-03"
 
 keywords:
 
@@ -28,7 +28,12 @@ If you are running mission critical applications on your {{site.data.keyword.cva
 When you add any servers for high availability, you should order them within the same VLAN and network as your other services.
 {: important}
 
-## Citrix Hypervisor
+## Best practices for configuring high availability
+{: #best-practices-ha}
+
+Review the following best practices for your relevant hypervisor.
+
+### Citrix Hypervisor
 {: #citrix-hypervisors-ha}
 
 As a best practice, configure N+1 hypervisors for high availability. You can add more hypervisors beyond N+1 to give you more flexibility to move workloads to between servers during a planned outage. You can order more bare metal servers through the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog?category=compute#services){: external}. 
@@ -36,6 +41,11 @@ As a best practice, configure N+1 hypervisors for high availability. You can add
 For application-level high availability, configure the hypervisors by using documentation from the hypervisor vendors. For more information, see [High Availability](https://docs.citrix.com/en-us/xencenter/7-1/pools-ha-about.html){: external}.
 
 For optimal manageability and availability, you can run hypervisor hosts in pools – at least one pool for server VDAs and at least one pool for desktop VDAs. For more information, see [Ensuring High Availability- XenApp and XenDesktop Deployments on Citrix Cloud](https://www.citrix.com/content/dam/citrix/en_us/documents/white-paper/ensuring-high-availability-xenapp-and-xendesktop-deployments-on-citrix-cloud.pdf){: external} and the Citrix product documentation on [Workload Separation](https://docs.citrix.com/en-us/xenapp-and-xendesktop/7-15-ltsr/citrix-vdi-best-practices/design/design-userlayer5.html#decision-workload-separation){: external}.
+
+### VMware ESXi
+{: #vmware-servers-ha}
+
+The minimum recommendation for high availability is three ESXi hosts with NFS storage.<!-- and 4 ESXi hosts with VSAN storage--> These servers are provisioned in the cluster and are highly available within the data center.
 
 ## Cloud Connectors
 {: #cloud-connectors-ha}

@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="cvad" category="compute" audience="platform" href="/docs/cvad?topic=cvad-getting-started-tutorial" path="cvad"}
+{: .toc subcollection="cvad" category="compute" audience="service" href="/docs/cvad?topic=cvad-getting-started-tutorial" path="cvad"}
 Citrix Virtual Apps and Desktops for IBM Cloud
 
     {: .navgroup id="learn"}
@@ -12,16 +12,33 @@ Citrix Virtual Apps and Desktops for IBM Cloud
 
     {: .navgroup id="howto"}
     provisioning-cvad.md
-    post-provisioning.md
-    configure-high-availability.md
-    configure-backup.md
-    configure-monitoring.md
-    order-bm-servers.md
-    cancel-bm-servers.md
-    modify-network-speed.md
-    order-networks-vms.md
-    modify-capacity-iops-storage.md
-    order-more-storage.md
+
+    {: .topicgroup}
+    Post-provisioning steps
+        post-provisioning.md
+        post-provisioning-vmware.md
+
+    {: .topicgroup}
+    Configuring
+        configure-high-availability.md
+        configure-backup.md
+        configure-monitoring.md
+
+    {: .topicgroup}
+    Managing servers
+        order-bm-servers.md
+        cancel-bm-servers.md
+
+    {: .topicgroup}
+    Managing network
+        order-networks-vms.md
+        modify-network-speed.md
+
+    {: .topicgroup}
+    Managing storage
+        order-more-storage.md
+        order-more-storage-vmware.md
+        modify-capacity-iops-storage.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}

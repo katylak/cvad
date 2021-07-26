@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-12-07"
+  years: 2020, 2021
+lastupdated: "2021-05-14"
 
 keywords:
 
@@ -27,7 +27,7 @@ subcollection: cvad
 {: #provisioning-cvad-cloud-catalog}
 
 When you provision {{site.data.keyword.cvad_full_notm}}, you receive the following components:
-* Citrix Hypervisors. You get to choose the configuration and quantity of bare metal servers during the ordering process.
+* Hypervisors - You get to choose the configuration and quantity of bare metal servers during the ordering process.
 * 3 x Cloud Connectors on public virtual server instances with Windows 2019 OS.
 * 1 x Active Directory server on a public virtual server instance with Windows 2016 OS.
 * 1 x DHCP server on a public virtual server instance with CentOS to dynamically allocate IPs to the virtual machines.
@@ -37,6 +37,21 @@ When you provision {{site.data.keyword.cvad_full_notm}}, you receive the followi
 
 All of the servers and virtual desktops are provisioned in IBM's private network.
 {: note}
+
+If you ordered CVAD with Citrix Hypervisors, you receive:
+
+*	Citrix Hypervisors - You get to choose the configuration and quantity of bare metal servers during the ordering process.
+*	File Storage with the capacity that you choose during the ordering process.
+
+If you ordered CVAD with VMware ESXi Hosts, you receive:
+
+*	VMware ESXi hosts -  You need to choose the configuration and quantity of bare metal servers during the ordering process. The VMware cluster is configured with these ESXi hosts.
+*	Fully configured vCenter server with NSX-V. You can choose to purchase the [licenses](https://test.cloud.ibm.com/docs/cvad?topic=cvad-provisioning-cvad#licensing-vmware) either from IBM or use your own license keys.
+*	Fully configured Active Directory server in the VMware cluster configured to enable deployments. No post-provisioning is required for this Active Directory server. This Active Directory server is in addition to the Active Directory servers used by {{site.data.keyword.cvad_full_notm}}. For more information, see [Active Directory Domain Services introduction](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-adds-intro). 
+*	File Storage with the capacity that you choose during the ordering process.
+<!--This vSAN bullet item is phase 2 VMware-->
+<!--•	vSAN storage based on the capacity of the disks you chose during the ordering process.-->
+
 
 ## Before you begin
 {: #before-you-begin-provisioning-cvad}
@@ -48,8 +63,9 @@ Before you begin, review the following prerequisites.
 1. Review and complete the prerequisites found in [Getting started with {{site.data.keyword.cvad_full_notm}}](/docs/cvad?topic=cvad-getting-started-tutorial).
 2. You must have either an active trial or paid subscription to Citrix Cloud. To learn more or to create an account, see [Citrix Cloud](https://onboarding.cloud.com/){: external}.
 3. You must have a Citrix API client and password pair. Download the client ID and Secret. For more information about creating the key pair, see [Create an API client](https://developer.cloud.com/getting-started){: external}
-4. Log in to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog){: external}  by using your unique credentials. 
-5. In the **Compute** section, locate the **Citrix Digital Workspace Solutions** section and select **Citrix Virtual Apps and Desktops**.
+4. Log in to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog){: external} by using your unique credentials. 
+5. Create a [Classic Infrastructure API key](https://cloud.ibm.com/iam/apikeys) in the IAM dashboard before you create an order. Retrieve and verify your credentials before proceeding. <!--( Pls Check with Jonathan for any changes here )-->
+6. In the **Compute** section, locate the **Citrix Digital Workspace Solutions** section and select **Citrix Virtual Apps and Desktops**.
 
 To provision {{site.data.keyword.cvad_full_notm}}, you need to enter the following information.
 
@@ -64,7 +80,7 @@ After you provide your Citrix credentials, make sure to select **Validate** to v
 | Citrix customer ID | This ID is your Citrix customer ID. For more information about locating your ID, see this Citrix [Getting started](https://developer.cloud.com/getting-started/docs/overview#customer-id){: external} information. If you need to create a new account ID, see [How to Create a New Citrix Account ID/Org ID](https://support.citrix.com/article/CTX106671){: external}. |
 | Citrix API client ID | Enter your Citrix API client ID information. For more information about creating the key pair, see [Create an API client](https://developer.cloud.com/getting-started){: external} from the Citrix Developer site. |
 | Citrix API client secret | Enter your Citrix API client secret key. |
-| Resource location | This Citrix resource location must be in the same geographic location as your selected {{site.data.keyword.cloud_notm}} data center. You can either create a resource location or use an existing one. The **Use existing** resource location option is only available after your account is validated. If you create a resource location, you must follow [Citrix naming restrictions](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/resource-locations.html#naming-restrictions){: external}. Be aware that there are [resource location limits](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops-service/limits.html#resource-location-limits){: external}. |
+| Resource location | This Citrix resource location must be in the same geographic location as your selected {{site.data.keyword.cloud_notm}} data center. You can either create a resource location or use an existing one. The **Use existing** resource location option is only available after your account is validated. If you create a resource location, you must follow [Citrix naming restrictions](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/resource-locations.html#naming-restrictions){: external}. When you create a resource location, use the [resource location limits](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops-service/limits.html#resource-location-limits){: external}. |
 | Hostname for Cloud Connector | These fields are optional for naming the Cloud Connector virtual machines. You can edit the names or keep the pre-populated defaults. If you edit the names, you must follow [Microsoft naming conventions](https://support.microsoft.com/en-us/help/909264/naming-conventions-in-active-directory-for-computers-domains-sites-and){: external}. |
 
 Select **Validate** to validate your credentials.  You must have valid credentials to create an order.
@@ -75,8 +91,8 @@ Select **Validate** to validate your credentials.  You must have valid credentia
 | Field     | Details     |
 | --------- | ----------- |
 |Active Directory Topology |How your Active Directory is installed. You have three options: <br>**IBM Cloud**<br>The Active Directory server is installed and configured on {{site.data.keyword.cloud_notm}}. <br>**Hybrid** <br>You use your existing on-premises Active Directory and you deploy a Domain Controller on {{site.data.keyword.cloud_notm}}.<br>**On-Premises** <br>You use your existing Active Directory and Domain Controller installed on-premises for this {{site.data.keyword.cvad_full_notm}} application. |
-| Cloud Connector and Active Directory domain name | The domain name is applied to both the Cloud Connectors and the Active Directory. You must follow [Microsoft naming conventions](https://support.microsoft.com/en-us/help/909264/naming-conventions-in-active-directory-for-computers-domains-sites-and){: external}. |
-| Active Directory safe mode password | The password must meet the following password complexity requirements: <br> Cannot contain the user's account name or parts of the user's full name that exceed two consecutive characters <br> Must be at least 7 characters in length <br> Must contain characters from three of the following four categories: <br>- English uppercase characters (A through Z) <br>- English lowercase characters (a through z) <br>- Base 10 digits (0 - 9) <br>- Non-alphabetic characters (for example, !, $, #, %) |
+|Cloud Connector and Active Directory domain name | The domain name is applied to both the Cloud Connectors and the Active Directory. You must follow [Microsoft naming conventions](https://support.microsoft.com/en-us/help/909264/naming-conventions-in-active-directory-for-computers-domains-sites-and){: external}. |
+|Active Directory safe mode password |The password must meet the following password complexity requirements: <br>Cannot contain the user's account name or parts of the user's full name that exceed two consecutive characters. <br> Must be at least 7 characters in length. <br> Must contain characters from three of the following four categories: <br>- English uppercase characters (A through Z) <br>- English lowercase characters (a through z) <br>- Base 10 digits (0 - 9) <br>- Non-alphabetic characters (for example, !, $, #, %) |
 {: caption="Table 2. Active Directory details" caption-side="top"}
 
 ### Workload requirements
@@ -109,22 +125,51 @@ All of your bare metal servers are configured identically based on your selectio
 | Field     | Details     |
 | --------- | ----------- |
 | Hostname root and domain | Your hostname and domain are saved in the server operating system and are used to identify servers. |
-| Location  | The data center location must match the geography of your Citrix resource location. |
+| Location  | The data center location must match the geographical area of your Citrix resource location. |
 | Image | An image is the deployed operating system for your servers. |
-| Profile | Consider selecting from the recommended server profiles, which are based on provided workload sizings by using Citrix best practices. You can select the **All servers** tab to choose from more supported server profiles. |
+| Profile | Consider selecting from the listed server profiles, which are based on provided workload sizings by using Citrix best practices. You can select the **All servers** tab to choose from more supported server profiles. |
 {: caption="Table 5. Server configuration details" caption-side="top"}
+
 
 ### File storage
 {: #file-storage}
 
+NFS file storage options:
+
 | Field     | Details     |
 | --------- | ----------- |
-| Size      | You can enter a file storage size 20 - 12,000 GB. |
+| Size      | You can enter a file storage size 20 - 12,000 GB. The minimum recommended size is 100 GB.|
 | Snapshot space | Select how much snapshot space you want for your file storage volume. For more information about snapshots, see [Snapshots](/docs/FileStorage?topic=FileStorage-snapshots). |
 | IOPS tier | By default, the IOPS tier is 4 IOPS/GB, which is designed for higher-intensity workloads. These workloads are typically characterized by having a high percentage of data active at any time. |
-{: caption="Table 6. File storage details" caption-side="top"}
+{: caption="Table 6. NFS File storage details" caption-side="top"}
+
+vSAN storage for VMware options:
+
+| Field     | Details     |
+| --------- | ----------- |
+| Disk type and size for vSAN capacity disks      | You select an option for the capacity disks that you need.|
+| Number of vSAN capacity disks | You enter the number of capacity disks that you want to add.|
+|vSAN license|You can order a vSAN license or provide your own. If you provide your own license, you must enter your license key.|
+{: caption="Table 7. vSAN File storage details" caption-side="top"}
+
+After you select the disk type and number of disks, a summary of your vSAN configuration is shown.
+![vSAN Summary Example.](images/vsan.summary.png){:caption="Figure 1. vSAN Summary Example" caption-side="bottom"}
+
+### Licensing
+{: #licensing-vmware}
+Licensing applies to VMware configurations only. 
+
+|Field   |Details   |
+|--------|----------|
+|vCenter Server License - Standard|You can order a Standard vCenter license or provide your own. If you provide your own license, you must enter your license key.|
+|vSphere Server license - Enterprise Plus|You can order an Enterprise Plus vSphere Server license or provide your own. If you provide your own license, you must enter your license key.|
+|VMWare license - NSX|You can order a VMWare NSX license or provide your own. You can order a Base, Advanced, or Enterprise license. If you provide your own license, you must enter your license key.|
+|vSAN license |You can order a vSAN license or provide your own. You can order an Advanced or Enterprise license. If you provide your own license, you must enter your license key.|
+{: caption="Table 8. VMWare Licensing details" caption-side="top"}
 
 ## Next steps
 {: #next-steps-provisioning-cvad}
 
-After you provision {{site.data.keyword.cvad_full_notm}}, you need to complete a few post-provisioning steps to get you up and running. For more information, see [Post-provisioning steps for Citrix Hypervisor](/docs/cvad?topic=cvad-post-provisioning-cvad).
+When the components are provisioned, you receive an email with information about the components ordered.
+
+After the {{site.data.keyword.cvad_full_notm}} components are provisioned, you need to complete a few post-provisioning steps to get you up and running. For more information, see [Post-provisioning steps for Citrix Hypervisor](/docs/cvad?topic=cvad-post-provisioning-cvad).
