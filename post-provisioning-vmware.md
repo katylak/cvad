@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-21"
+lastupdated: "2021-08-06"
 
 keywords:
 
@@ -187,30 +187,36 @@ vCenter access information is available in the summary tab. You can access the v
 ## Step 7: Create master image of Virtual Machine
 {: #create-master-image-vmware}
 
-1. Install the VDA on the virtual machine. For more information, see [Install VDAs](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops-service/install-configure/install-vdas.html#step-1-download-the-p[…]and-launch-the-wizard).
+1. Create a New Distributed Port Group (DPG) attached to the private distributed switch. In the configuration settings of the window, leave the VLAN type as NONE. 
 
-1. Create the master image for virtual machines with vCenter. If you are using vSAN, when you get to the Select storage step of creating New Virtual Machine, select the vsanDatastore.
+2. Create the master image for virtual machines with vCenter. If you are using vSAN, when you get to the Select storage step of creating New Virtual Machine, select the vsanDatastore. When you create the VM, make sure to have the VM Network pointing to the DPG you created.
 
-1. Create a New Distributed Port Group (DPG) attached to the private distributed switch. In the configuration settings of the window, leave the VLAN type as NONE. When you create the VM, make sure to have the VM Network pointing to the DPG you created.
+3. Install VMware tools on the guest operating system of the virtual machine created. See [Installing VMware tools](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.html.hostclient.doc/GUID-ED3ECA21-5763-4919-8947-A819A17980FB.html?hWord=N4IghgNiBcIG4FsDuYBOBTABAFwPa4gGcQBfIA)
 
-1. Join the virtual machine master image to the Active Directory server domain.
+4. Join the virtual machine master image to the Active Directory server domain.
 
-1. Add the proxy server settings to your master image. These settings can be copied from the Cloud Connector virtual server to the Master VM Image. 
+5. Add the proxy server settings to your master image. 
 
-   1. Follow the instructions to set up [proxy settings](https://docs.microsoft.com/en-us/troubleshoot/browsers/use-proxy-servers-with-ie). 
+    1. The settings can be copied from the Cloud Connector server to the Master VM Image. Follow the instructions to set up [proxy settings](https://docs.microsoft.com/en-us/troubleshoot/browsers/use-proxy-servers-with-ie). 
 
-   2. Copy the proxy settings.
+   2. Using the instructions in [proxy settings](https://docs.microsoft.com/en-us/troubleshoot/browsers/use-proxy-servers-with-ie), paste the copied settings to your Master VM image.  
 
-   3. Log in to Xencenter and paste the settings to your master image. 
-   4. While connected to the Master VM Image, enter this command:
+6. While connected to the Master VM Image, enter this command on an elevated command prompt of the Master VM Image:
 
       ``netsh winhttp import proxy source=ie``
 
-   5. (Optional) To give access to all other non-administrator users, do one of the following methods:
+7. Install the VDA on the virtual machine. For more information, see [Install VDAs](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops-service/install-configure/install-vdas.html#step-1-download-the-p[…]and-launch-the-wizard).
+
+8. (Optional) To give access to all other non-administrator users, do one of the following methods:
 
       * Use Microsoft Group Policy settings
       * Update the windows registry on the master image and set **Proxysettingsperuser** to ***0***.
-
+        1. Press the `Win+R` keys to optn the Run window. 
+        2. Enter **regedit** and **Enter** to open the Registry Editor. 
+        3. In registry Editor, navigate to the following registry path:
+        HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings
+        4. Double-click on the **ProxySettingsPerUser** registry.
+        5. Change the Value to **0**.
 
 Individual virtual machine performance varies depending on workload. However, to take advantage of optimizations that might result in improved performance, you can use [this tool for Windows 10](https://techcommunity.microsoft.com/t5/windows-virtual-desktop/windows-virtual-desktop-optimization-tool-now-available/m-p/1558614).
 {: tip}
@@ -221,7 +227,4 @@ Individual virtual machine performance varies depending on workload. However, to
 After you complete these post-provisioning steps, you can:
 
 *  Order more bare metal servers for your cluster. See [Ordering more bare metal servers](/docs/cvad?topic=cvad-order-bare-metal-servers).
-
-*  Install your Virtual Delivery Agent (VDA) on your virtual machine. For more information about installing the VDA, machine creation scripts, and delivery groups for desktops, see [Citrix documentation](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops-service/install-configure.html#install-vdas-register-resources).
-
 *  Complete your management tasks in the [Citrix Cloud Portal](https://accounts.cloud.com/core/login?ReturnUrl=%2Fcore%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DRtmydVjvjLZBbU3qU3b8eQ%253D%253D%26redirect_uri%3Dhttps%253A%252F%252Fcitrix.cloud.com%252Foauth%26response_type%3Dcode%26scope%3Dopenid%2520email%2520profile%2520ctx_principal_aliases%2520offline_access%2520ctx_universal%26state%3Dhttps%253A%252F%252Fcitrix.cloud.com%252Foauth.8d6b5e58-752c-447e-865a-492d56f08d2a).
