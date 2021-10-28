@@ -76,10 +76,10 @@ You must provision the virtual server instance with the same [network details](/
 
 If you chose **IBM Cloud** Active Directory topology and are using the Active Directory in {{site.data.keyword.cloud_notm}} as your only domain controller, no further network configuration is required. The Cloud Connectors are joined to the Active Directory server domain and are configured to communicate with Citrix Cloud. You might have to create users with the necessary privileges. You can also create bulk users in Active Directory. For more information, see this step-by-step guide on how to [Create bulk users in Active Directory](https://activedirectorypro.com/create-bulk-users-active-directory/){: external}.
 
-### Hybrid
+### Extended
 {: #ad-topology-network-connectivity-hybrid}
 
-1. With a Hybrid setup, you must establish network connectivity between {{site.data.keyword.cloud_notm}} and your on-premises location. 
+1. With an Extended setup, you must establish network connectivity between {{site.data.keyword.cloud_notm}} and your on-premises location. 
 
    You can set up network connectivity by using any of the gateway appliances available in {{site.data.keyword.cloud_notm}}. For more information, see the **About** section in the [Gateway Appliance {{site.data.keyword.cloud_notm}} catalog page](https://cloud.ibm.com/gen1/infrastructure/provision/gateway){: external}. 
    

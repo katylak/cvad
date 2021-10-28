@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-14"
+lastupdated: "2021-08-24"
 
 keywords:
 
@@ -20,11 +20,12 @@ subcollection: cvad
 {:note: .note}
 {:table: .aria-labeledby="caption"}
 
-# Provisioning Citrix Virtual Apps and Desktops for IBM Cloud
-{: #provisioning-cvad}
+# Provisioning Citrix Virtual Apps and Desktops on IBM Cloud Classic infrastructure
+{: #provisioning-cvad-classic}
 
-## Provisioning a {{site.data.keyword.cvad_short}} service
-{: #provisioning-cvad-cloud-catalog}
+
+## What is provisioned
+{: #what-is-provisioned-classic}
 
 When you provision {{site.data.keyword.cvad_full_notm}}, you receive the following components:
 * Hypervisors - You get to choose the configuration and quantity of bare metal servers during the ordering process.
@@ -49,8 +50,7 @@ If you ordered CVAD with VMware ESXi Hosts, you receive:
 *	Fully configured vCenter server with NSX-V. You can choose to purchase the [licenses](https://test.cloud.ibm.com/docs/cvad?topic=cvad-provisioning-cvad#licensing-vmware) either from IBM or use your own license keys.
 *	Fully configured Active Directory server in the VMware cluster configured to enable deployments. No post-provisioning is required for this Active Directory server. This Active Directory server is in addition to the Active Directory servers used by {{site.data.keyword.cvad_full_notm}}. For more information, see [Active Directory Domain Services introduction](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-adds-intro). 
 *	File Storage with the capacity that you choose during the ordering process.
-<!--This vSAN bullet item is phase 2 VMware-->
-<!--•	vSAN storage based on the capacity of the disks you chose during the ordering process.-->
+* vSAN storage based on the capacity of the disks you chose during the ordering process.
 
 
 ## Before you begin
@@ -90,9 +90,9 @@ Select **Validate** to validate your credentials.  You must have valid credentia
 
 | Field     | Details     |
 | --------- | ----------- |
-|Active Directory Topology |How your Active Directory is installed. You have three options: <br>**IBM Cloud**<br>The Active Directory server is installed and configured on {{site.data.keyword.cloud_notm}}. <br>**Hybrid** <br>You use your existing on-premises Active Directory and you deploy a Domain Controller on {{site.data.keyword.cloud_notm}}.<br>**On-Premises** <br>You use your existing Active Directory and Domain Controller installed on-premises for this {{site.data.keyword.cvad_full_notm}} application. |
+|Active Directory Topology |How your Active Directory is installed. You have three options:  \n **IBM Cloud**  /n Deploy a new Active Directory controller on {{site.data.keyword.cloud_notm}}.  \n **Extended**  \n You use an existing Active Directory and deploy a Domain Controller on {{site.data.keyword.cloud_notm}}.  \n **On-Premises**  \n You use your existing Active Directory and Domain Controller installed on-premises for this Citrix Virtual Apps and Desktops for IBM Cloud application. |
 |Cloud Connector and Active Directory domain name | The domain name is applied to both the Cloud Connectors and the Active Directory. You must follow [Microsoft naming conventions](https://support.microsoft.com/en-us/help/909264/naming-conventions-in-active-directory-for-computers-domains-sites-and){: external}. |
-|Active Directory safe mode password |The password must meet the following password complexity requirements: <br>Cannot contain the user's account name or parts of the user's full name that exceed two consecutive characters. <br> Must be at least 7 characters in length. <br> Must contain characters from three of the following four categories: <br>- English uppercase characters (A through Z) <br>- English lowercase characters (a through z) <br>- Base 10 digits (0 - 9) <br>- Non-alphabetic characters (for example, !, $, #, %) |
+|Active Directory safe mode password |The password must meet the following password complexity requirements:  \n Cannot contain the user's account name or parts of the user's full name that exceed two consecutive characters.  \n  Must be at least 7 characters in length.  \n  Must contain characters from three of the following four categories:  \n - English uppercase characters (A through Z)  /n - English lowercase characters (a through z)  \n - Base 10 digits (0 - 9)  \n - Non-alphabetic characters (for example, !, $, #, %) |
 {: caption="Table 2. Active Directory details" caption-side="top"}
 
 ### Workload requirements
@@ -153,10 +153,11 @@ vSAN storage for VMware options:
 {: caption="Table 7. vSAN File storage details" caption-side="top"}
 
 After you select the disk type and number of disks, a summary of your vSAN configuration is shown.
-![vSAN Summary Example.](images/vsan.summary.png){:caption="Figure 1. vSAN Summary Example" caption-side="bottom"}
+![vSAN Summary Example.](images/vsan.summary.png){: caption="Figure 1. vSAN Summary Example" caption-side="bottom"}
 
 ### Licensing
 {: #licensing-vmware}
+
 Licensing applies to VMware configurations only. 
 
 |Field   |Details   |
