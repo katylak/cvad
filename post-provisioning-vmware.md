@@ -66,10 +66,10 @@ You must provision the virtual server instance with the same network details as 
 
 If you chose **IBM Cloud** Active Directory topology and are using the Active Directory in {{site.data.keyword.cloud_notm}} as your only domain controller, no further network configuration is required. The Cloud Connectors are joined to the Active Directory server domain and are configured to communicate with Citrix Cloud. You might have to create users with the necessary privileges. You can also create bulk users in Active Directory. For more information, see this step-by-step guide on how to [Create bulk users in Active Directory](https://activedirectorypro.com/create-bulk-users-active-directory/){: external}.
 
-### Extended
+### Extended (Multisite)
 {: #ad-topology-network-connectivity-hybrid-vmware}
 
-1. With an Extended setup, you must establish network connectivity between {{site.data.keyword.cloud_notm}} and your on-premises location. 
+1. With an Extended (Multisite) setup, you must establish network connectivity between {{site.data.keyword.cloud_notm}} and your on-premises location. 
 
    You can set up network connectivity by using any of the gateway appliances available in {{site.data.keyword.cloud_notm}}. For more information, see the **About** section in the [Gateway Appliance {{site.data.keyword.cloud_notm}} catalog page](https://cloud.ibm.com/gen1/infrastructure/provision/gateway){: external}. 
    
@@ -109,12 +109,12 @@ If you chose **IBM Cloud** Active Directory topology and are using the Active Di
 
        Replace the contents of the {} with the values for your system. 
 
-### On-Premises
+### Extended (Site-to-Site)
 {: #ad-topology-network-connectivity-onprem-vmware}
 
 **Domain controller latency issues**
 
-The On-Premises option does not have a domain controller (DC) on {{site.data.keyword.cloud_notm}}. Sites that do not have domain controllers are less efficient because of slow AD authentication and GPO processing. If you have sites with no DCs, you can limit the latency issues if you:
+The Extended (Site-to-Site) option does not have a domain controller (DC) on {{site.data.keyword.cloud_notm}}. Sites that do not have domain controllers are less efficient because of slow AD authentication and GPO processing. If you have sites with no DCs, you can limit the latency issues if you:
 * Create the AD subnets for these sites and link them to the closest site with a DC. The sites reach the on-premises side for AD authentication and GPO processing.
 * Enable GPO processing over [slow links detection](https://technet.microsoft.com/en-us/library/cc781031%28v=ws.10%29.aspx?f=255&MSPPError=-2147217396).
 
@@ -124,7 +124,7 @@ Other Active Directory Best practices include:
 
 **Network Connectivity** 
 
-1. With an On-Premises setup, you must establish network connectivity between {{site.data.keyword.cloud_notm}} and your on-premises location. 
+1. With an Extended (Site-to-Site) setup, you must establish network connectivity between {{site.data.keyword.cloud_notm}} and your on-premises location. 
 
    You can set up network connectivity by using any of the gateway appliances available in {{site.data.keyword.cloud_notm}}. For more information, see the **About** section in the [Gateway Appliance {{site.data.keyword.cloud_notm}} catalog page](https://cloud.ibm.com/gen1/infrastructure/provision/gateway){: external}. 
    
