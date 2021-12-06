@@ -29,8 +29,8 @@ When you add or delete a service or infrastructure component, you must wait unti
 You can add more storage on your bare metal servers as a separate mount point for any operational reasons.
 
 1. Navigate to **Menu icon ![Menu icon](../icons/icon_hamburger.svg) > VMware > Resources**. 
-1. Select your vCenter Instance. 
-1. Click the **Infrastructure** tab. 
-1. Click **Add** for Storage to order additional storage.
-1. Select the options for the storage that you need. 
-7. Accept the terms and click **Create**. 
+2. Select your vCenter Instance. 
+3. Click the **Infrastructure** tab. 
+4. Click **Add** for Storage to order additional storage.
+5. Select the options for the storage that you need. 
+6. Accept the terms and click **Create**. 

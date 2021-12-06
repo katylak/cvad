@@ -45,8 +45,8 @@ After you provision your {{site.data.keyword.cvad_full}} (CVAD) with the VMware 
 
     *	Private VLAN number and the Data Center in which it is created. You use this network information when you establish network connectivity to IBM Cloud Private network space.
     *	The devices configured under this VLAN. This list includes all the ESXi hosts and CVAD components like Cloud Connectors and Active Directory. Click any of the links to view the server details. 
-    *	/24 portable subnet with 256 IP addresses that is created per your CVAD order. You need to create VMs on this portable subnet. Multiple portable subnets are shown. <!--KT for phase 2: You can identify the one for CVAD by searching the notes column(provided issue 655 is fixed)-->.
-    *	Storage details like NFS<!--KT for phase 2: or VSAN-->.
+    *	/24 portable subnet with 256 IP addresses that is created per your CVAD order. You need to create VMs on this portable subnet. Multiple portable subnets are shown. 
+    *	Storage details like NFS.
 
 You can search for details about your server on the Classic infrastructure Resource List page. Your CVAD servers are provisioned with two tags: `CVAD` and `Resource` location name. The resource location name is the name that you provided during the ordering process. To verify that your servers are provisioned, use these tags to filter for the servers in the Resource List page.
 
@@ -199,7 +199,7 @@ vCenter access information is available in the summary tab. You can access the v
 
     1. The settings can be copied from the Cloud Connector server to the Master VM Image. Follow the instructions to set up [proxy settings](https://docs.microsoft.com/en-us/troubleshoot/browsers/use-proxy-servers-with-ie). 
 
-   2. Using the instructions in [proxy settings](https://docs.microsoft.com/en-us/troubleshoot/browsers/use-proxy-servers-with-ie), paste the copied settings to your Master VM image.  
+    2. Using the instructions in [proxy settings](https://docs.microsoft.com/en-us/troubleshoot/browsers/use-proxy-servers-with-ie), paste the copied settings to your Master VM image.  
 
 6. While connected to the Master VM Image, enter this command on an elevated command prompt of the Master VM Image:
 

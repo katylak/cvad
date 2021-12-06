@@ -41,12 +41,12 @@ You can add more bare metal servers (ESXi hosts) to scale out your existing clus
 
 1. Log in to the [{{site.data.keyword.cloud}} console](https://cloud.ibm.com/login){: external} by using your unique credentials.
 2. Select **Menu icon ![Menu icon](../icons/icon_hamburger.svg) > VMware > Resources**. 
-2. Select your vCenter Instance.
-3. Click the **Infrastructure** tab. 
-4. Click **Add** for the ESXi servers to add more hosts to the cluster.
-5. Select the licensing option that you use.
-6. Select the CPU generation, model, RAM, Storage, and Network Interface options for your solution.  
-7. Accept the terms and click **Create**. 
-8. Verify that the added ESXi server is not in Maintenance Mode. You cannot create new virtual machines if the new server is in Maintenance Mode. View the new server in the vSphere client under the cluster and take the server out of Maintenance Mode, if necessary. 
+3. Select your vCenter Instance.
+4. Click the **Infrastructure** tab. 
+5. Click **Add** for the ESXi servers to add more hosts to the cluster.
+6. Select the licensing option that you use.
+7. Select the CPU generation, model, RAM, Storage, and Network Interface options for your solution.  
+8. Accept the terms and click **Create**. 
+9. Verify that the added ESXi server is not in Maintenance Mode. You cannot create new virtual machines if the new server is in Maintenance Mode. View the new server in the vSphere client under the cluster and take the server out of Maintenance Mode, if necessary. 
 
 

@@ -223,7 +223,7 @@ The Active Directory and Cloud Connectors can be accessed through a Remote Deskt
 
 6. Install the VDA on the virtual machine. For more information, see [Install VDAs](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops-service/install-configure/install-vdas.html#step-1-download-the-p[…]and-launch-the-wizard).
 
-5. (Optional) To give access to all other non-administrator users, do one of the following methods:
+7. (Optional) To give access to all other non-administrator users, do one of the following methods:
 
       * Use Microsoft Group Policy settings
       * Update the windows registry on the master image and set **Proxysettingsperuser** to ***0***.

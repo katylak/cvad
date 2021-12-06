@@ -23,6 +23,7 @@ subcollection: cvad
 
 # Ordering more storage on your bare metal servers
 {: #order-extra-storage-vm}
+
 If you need more storage on your bare metal servers as a separate mount point for any operational reasons, complete the following steps.
 
 1. Log in to the [{{site.data.keyword.cloud}} console](https://cloud.ibm.com/login){: external} by using your unique credentials.

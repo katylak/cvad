@@ -26,6 +26,6 @@ subcollection: cvad
 
 The solution is integrated with the CVAD service deployment model, which shifts the management of core components to Citrix so you can focus on managing your applications and desktops. {{site.data.keyword.cloud_notm}} creates the Citrix Cloud Connectors and other compute, networking, and storage components that are required to host your applications and desktops and connects the {{site.data.keyword.cloud_notm}} resource location to Citrix Cloud. You manage the infrastructure components after provisioning, including the Active Directory and Virtual Delivery Agents (VDAs).
 
-![Architecture diagram.](images/CitrixArchDiagram.svg){:caption="Figure 1. {{site.data.keyword.cvad_full_notm}} architecture diagram" caption-side="bottom"}
+![Architecture diagram.](images/CitrixArchDiagram.svg){: caption="Figure 1. {{site.data.keyword.cvad_full_notm}} architecture diagram" caption-side="bottom"}
 
 For more information about Citrix Virtual Apps and Desktops service, see [Citrix documentation](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops-service){: external}.

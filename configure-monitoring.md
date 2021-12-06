@@ -46,10 +46,10 @@ You can configure VMware Vrealize for monitoring your VMware cluster.
 
 1. Log in to the [{{site.data.keyword.cloud}} console](https://cloud.ibm.com/login){: external} by using your unique credentials.
 2. Navigate to **Menu icon ![Menu icon](../icons/icon_hamburger.svg) > VMware > Resources**.
-2. Select your vCenter instance.
-3. Click the **Services** tab.
-4. Click **Add**.
-5. Click **vRealize Operations**. 
-6. Accept the terms and click **Create**. 
+3. Select your vCenter instance.
+4. Click the **Services** tab.
+5. Click **Add**.
+6. Click **vRealize Operations**. 
+7. Accept the terms and click **Create**. 
 
 For more information, see [vRealize Operations and Log Insight overview](/docs/VMwaresolutions?topic=VMwaresolutions-vrops_overview).

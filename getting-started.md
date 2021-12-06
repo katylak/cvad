@@ -24,7 +24,7 @@ subcollection: cvad
 {: #getting-started-tutorial}
 
 Use {{site.data.keyword.cvad_full_notm}} to create a dedicated {{site.data.keyword.cvad_short}} service environment at any of our global data centers.
-{:shortdesc}
+{: shortdesc}
 
 ## Before you begin
 {: #before-you-begin-getting-started}
@@ -81,10 +81,10 @@ To provision {{site.data.keyword.cvad_full_notm}}, classic infrastructure users 
 
 | Category | Permission/Action |
 | -------- | ---------- |
-| Account | <br>- Add/Upgrade Storage (StorageLayer) <br>- Add Server <br>- Cancel Server <br>- Add/Upgrade Services <br>- Cancel Services <br>- Add/Upgrade Cloud Instances <br>- View Event Log |
+| Account |   \n - Add/Upgrade Storage (StorageLayer)  \n - Add Server    \n- Cancel Server    \n - Add/Upgrade Services    \n - Cancel Services    \n - Add/Upgrade Cloud Instances    \n - View Event Log |
 | Devices | Select all |
-| Network | - Add IP addresses <br>- Add Compute with Public Network Port|
-| Services |- View licenses <br>- Storage Manage |
+| Network | - Add IP addresses    \n - Add Compute with Public Network Port|
+| Services |- View licenses    \n - Storage Manage |
 {: caption="Table 1. Required user permissions to provision" caption-side="top"}
 
 To access and update the classic infrastructure permissions, complete the following steps:

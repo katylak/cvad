@@ -41,8 +41,8 @@ You can cancel one or more ESXi hosts from your cluster. You should have three h
 
 1. Log in to the [{{site.data.keyword.cloud}} console](https://cloud.ibm.com/login){: external} by using your unique credentials.
 2. Navigate to **Menu icon ![Menu icon](../icons/icon_hamburger.svg) > VMware > Resources**.
-2. Select your vCenter Instance. 
-3. Click the **Infrastructure** tab. 
-4. Select your cluster.
-5. Select the ESXi hosts you would like to delete. 
-6. Click **Delete**.
+3. Select your vCenter Instance. 
+4. Click the **Infrastructure** tab. 
+5. Select your cluster.
+6. Select the ESXi hosts you would like to delete. 
+7. Click **Delete**.
