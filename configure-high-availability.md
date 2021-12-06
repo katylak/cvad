@@ -45,7 +45,7 @@ For optimal manageability and availability, you can run hypervisor hosts in pool
 ### VMware ESXi
 {: #vmware-servers-ha}
 
-The minimum recommendation for high availability is three ESXi hosts with NFS storage.<!-- and 4 ESXi hosts with VSAN storage--> These servers are provisioned in the cluster and are highly available within the data center.
+The minimum recommendation for high availability is three ESXi hosts with NFS storage. These servers are provisioned in the cluster and are highly available within the data center.
 
 ## Cloud Connectors
 {: #cloud-connectors-ha}

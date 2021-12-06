@@ -28,6 +28,7 @@ Use {{site.data.keyword.cvad_full_notm}} to create a dedicated {{site.data.keywo
 
 ## Before you begin
 {: #before-you-begin-getting-started}
+
 Before you begin, review the following information.
 
 * Want to learn more about {{site.data.keyword.cvad_full_notm}} and how it works? To learn more, see [About {{site.data.keyword.cvad_full_notm}}](/docs/cvad?topic=cvad-about-citrix-virtual-apps-and-desktops). 

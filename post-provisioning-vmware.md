@@ -223,6 +223,7 @@ Individual virtual machine performance varies depending on workload. However, to
 
 
 ## Next steps
+{: #post-prov-vm-next}
 
 After you complete these post-provisioning steps, you can:
 

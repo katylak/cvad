@@ -64,7 +64,7 @@ Before you begin, review the following prerequisites.
 2. You must have either an active trial or paid subscription to Citrix Cloud. To learn more or to create an account, see [Citrix Cloud](https://onboarding.cloud.com/){: external}.
 3. You must have a Citrix API client and password pair. Download the client ID and Secret. For more information about creating the key pair, see [Create an API client](https://developer.cloud.com/getting-started){: external}
 4. Log in to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog){: external} by using your unique credentials. 
-5. Create a [Classic Infrastructure API key](https://cloud.ibm.com/iam/apikeys) in the IAM dashboard before you create an order. Retrieve and verify your credentials before proceeding. <!--( Pls Check with Jonathan for any changes here )-->
+5. Create a [Classic Infrastructure API key](https://cloud.ibm.com/iam/apikeys) in the IAM dashboard before you create an order. Retrieve and verify your credentials before proceeding. 
 6. In the **Compute** section, locate the **Citrix Digital Workspace Solutions** section and select **Citrix Virtual Apps and Desktops**.
 
 To provision {{site.data.keyword.cvad_full_notm}}, you need to enter the following information.
@@ -82,6 +82,8 @@ After you provide your Citrix credentials, make sure to select **Validate** to v
 | Citrix API client secret | Enter your Citrix API client secret key. |
 | Resource location | This Citrix resource location must be in the same geographic location as your selected {{site.data.keyword.cloud_notm}} data center. You can either create a resource location or use an existing one. The **Use existing** resource location option is only available after your account is validated. If you create a resource location, you must follow [Citrix naming restrictions](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/resource-locations.html#naming-restrictions){: external}. When you create a resource location, use the [resource location limits](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops-service/limits.html#resource-location-limits){: external}. |
 | Hostname for Cloud Connector | These fields are optional for naming the Cloud Connector virtual machines. You can edit the names or keep the pre-populated defaults. If you edit the names, you must follow [Microsoft naming conventions](https://support.microsoft.com/en-us/help/909264/naming-conventions-in-active-directory-for-computers-domains-sites-and){: external}. |
+{: caption="Table 1. Citrix connectivity details" caption-side="top"}
+
 
 Select **Validate** to validate your credentials.  You must have valid credentials to create an order.
 
