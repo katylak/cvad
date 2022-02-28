@@ -28,12 +28,15 @@ toc:
         label: Provisioning steps
         topics:
           - provisioning-cvad.md
+          - provisioning-cvad-vpc.md
+
 
      - topicgroup:
         label: Post-provisioning steps
         topics:
           - post-provisioning.md
           - post-provisioning-vmware.md
+          - post-provisioning-vpc.md
 
      - topicgroup:
         label: Configuring
@@ -72,4 +75,5 @@ toc:
       topics:
       - faqs.md
       - troubleshooting.md
+      - troubleshooting-vpc.md
       - getting-help.md
