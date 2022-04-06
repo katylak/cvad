@@ -157,7 +157,7 @@ You must create the proper Schematics access policies for a user to deploy CVADs
 
 After you have reviewed and completed these prerequisites, you are ready to provision {{site.data.keyword.cvad_full_notm}}. For more information, see:
 
-*  [Provisioning {{site.data.keyword.cvad_full_notm}}](/docs/cvad?topic=cvad-provisioning-cvad) for Classic and VMWare solutions
+*  [Provisioning {{site.data.keyword.cvad_full_notm}}](/docs/cvad?topic=cvad-provisioning-cvad-classic) for Classic and VMWare solutions
 
 * [Provisioning Citrix Virtual Apps and Desktops on Virtual Private Cloud](/docs/cvad?topic=cvad-provisioning-cvad-vpc)
 
